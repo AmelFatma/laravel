@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Pharmatique &mdash; </title>
+  <title>Pharma &mdash; Colorlib Template</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -42,14 +42,14 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="index.html" class="js-logo-clone">Pharmatique</a>
+              <a href="index.html" class="js-logo-clone">Pharma</a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Store</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="shop.html">Store</a></li>
                 <li class="has-children">
                   <a href="#">Dropdown</a>
                   <ul class="dropdown">
@@ -65,7 +65,7 @@
                     </li>
                     <li><a href="#">Diet &amp; Nutrition</a></li>
                     <li><a href="#">Tea &amp; Coffee</a></li>
-                    
+
                   </ul>
                 </li>
                 <li><a href="about.html">About</a></li>
@@ -86,71 +86,38 @@
       </div>
     </div>
 
-    <div class="site-blocks-cover" style="background-image: url('images/hero_1.jpg');">
+    <div class="bg-light py-3">
       <div class="container">
         <div class="row">
-          <div class="col-lg-7 mx-auto order-lg-2 align-self-center">
-            <div class="site-block-cover-content text-center">
-              <h2 class="sub-title">Effective Medicine, New Medicine Everyday</h2>
-              <h1>Welcome To Pharmatique</h1>
-              <p>
-                <a href="#" class="btn btn-primary px-5 py-3">Shop Now</a>
-              </p>
-            </div>
-          </div>
+          <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Store</strong></div>
         </div>
       </div>
     </div>
 
     <div class="site-section">
       <div class="container">
-        <div class="row align-items-stretch section-overlap">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="banner-wrap bg-primary h-100">
-              <a href="#" class="h-100">
-                <h5>Free <br> Shipping</h5>
-                <p>
-                  Amet sit amet dolor
-                  <strong>Lorem, ipsum dolor sit amet consectetur adipisicing.</strong>
-                </p>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="banner-wrap h-100">
-              <a href="#" class="h-100">
-                <h5>Season <br> Sale 50% Off</h5>
-                <p>
-                  Amet sit amet dolor
-                  <strong>Lorem, ipsum dolor sit amet consectetur adipisicing.</strong>
-                </p>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="banner-wrap bg-warning h-100">
-              <a href="#" class="h-100">
-                <h5>Buy <br> A Gift Card</h5>
-                <p>
-                  Amet sit amet dolor
-                  <strong>Lorem, ipsum dolor sit amet consectetur adipisicing.</strong>
-                </p>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="site-section">
-      <div class="container">
+        
         <div class="row">
-          <div class="title-section text-center col-12">
-            <h2 class="text-uppercase">Popular Products</h2>
+          <div class="col-lg-6">
+            <h3 class="mb-3 h6 text-uppercase text-black d-block">Filter by Price</h3>
+            <div id="slider-range" class="border-primary"></div>
+            <input type="text" name="text" id="amount" class="form-control border-0 pl-0 bg-white" disabled="" />
+          </div>
+          <div class="col-lg-6">
+            <h3 class="mb-3 h6 text-uppercase text-black d-block">Filter by Reference</h3>
+            <button type="button" class="btn btn-secondary btn-md dropdown-toggle px-4" id="dropdownMenuReference"
+              data-toggle="dropdown">Reference</button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+              <a class="dropdown-item" href="#">Relevance</a>
+              <a class="dropdown-item" href="#">Name, A to Z</a>
+              <a class="dropdown-item" href="#">Name, Z to A</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Price, low to high</a>
+              <a class="dropdown-item" href="#">Price, high to low</a>
+            </div>
           </div>
         </div>
-
+    
         <div class="row">
           <div class="col-sm-6 col-lg-4 text-center item mb-4">
             <span class="tag">Sale</span>
@@ -168,9 +135,44 @@
             <h3 class="text-dark"><a href="shop-single.html">Umcka Cold Care</a></h3>
             <p class="price">$120.00</p>
           </div>
+    
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+    
+            <a href="shop-single.html"> <img src="images/product_04.png" alt="Image"></a>
+            <h3 class="text-dark"><a href="shop-single.html">Cetyl Pure</a></h3>
+            <p class="price"><del>45.00</del> &mdash; $20.00</p>
+          </div>
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <a href="shop-single.html"> <img src="images/product_05.png" alt="Image"></a>
+            <h3 class="text-dark"><a href="shop-single.html">CLA Core</a></h3>
+            <p class="price">$38.00</p>
+          </div>
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <span class="tag">Sale</span>
+            <a href="shop-single.html"> <img src="images/product_06.png" alt="Image"></a>
+            <h3 class="text-dark"><a href="shop-single.html">Poo Pourri</a></h3>
+            <p class="price"><del>$89</del> &mdash; $38.00</p>
+          </div>
 
           <div class="col-sm-6 col-lg-4 text-center item mb-4">
-
+            <span class="tag">Sale</span>
+            <a href="shop-single.html"> <img src="images/product_01.png" alt="Image"></a>
+            <h3 class="text-dark"><a href="shop-single.html">Bioderma</a></h3>
+            <p class="price"><del>95.00</del> &mdash; $55.00</p>
+          </div>
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <a href="shop-single.html"> <img src="images/product_02.png" alt="Image"></a>
+            <h3 class="text-dark"><a href="shop-single.html">Chanca Piedra</a></h3>
+            <p class="price">$70.00</p>
+          </div>
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <a href="shop-single.html"> <img ˀsrc="images/product_03.png" alt="Image"></a>
+            <h3 class="text-dark"><a href="shop-single.html">Umcka Cold Care</a></h3>
+            <p class="price">$120.00</p>
+          </div>
+          
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+          
             <a href="shop-single.html"> <img src="images/product_04.png" alt="Image"></a>
             <h3 class="text-dark"><a href="shop-single.html">Cetyl Pure</a></h3>
             <p class="price"><del>45.00</del> &mdash; $20.00</p>
@@ -188,114 +190,24 @@
           </div>
         </div>
         <div class="row mt-5">
-          <div class="col-12 text-center">
-            <a href="shop.html" class="btn btn-primary px-4 py-3">View All Products</a>
+          <div class="col-md-12 text-center">
+            <div class="site-block-27">
+              <ul>
+                <li><a href="#">&lt;</a></li>
+                <li class="active"><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&gt;</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     
-    <div class="site-section bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="title-section text-center col-12">
-            <h2 class="text-uppercase">New Products</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 block-3 products-wrap">
-            <div class="nonloop-block-3 owl-carousel">
-
-              <div class="text-center item mb-4">
-                <a href="shop-single.html"> <img src="images/product_03.png" alt="Image"></a>
-                <h3 class="text-dark"><a href="shop-single.html">Umcka Cold Care</a></h3>
-                <p class="price">$120.00</p>
-              </div>
-
-              <div class="text-center item mb-4">
-                <a href="shop-single.html"> <img src="images/product_01.png" alt="Image"></a>
-                <h3 class="text-dark"><a href="shop-single.html">Umcka Cold Care</a></h3>
-                <p class="price">$120.00</p>
-              </div>
-
-              <div class="text-center item mb-4">
-                <a href="shop-single.html"> <img src="images/product_02.png" alt="Image"></a>
-                <h3 class="text-dark"><a href="shop-single.html">Umcka Cold Care</a></h3>
-                <p class="price">$120.00</p>
-              </div>
-
-              <div class="text-center item mb-4">
-                <a href="shop-single.html"> <img src="images/product_04.png" alt="Image"></a>
-                <h3 class="text-dark"><a href="shop-single.html">Umcka Cold Care</a></h3>
-                <p class="price">$120.00</p>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="title-section text-center col-12">
-            <h2 class="text-uppercase">Testimonials</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 block-3 products-wrap">
-            <div class="nonloop-block-3 no-direction owl-carousel">
-        
-              <div class="testimony">
-                <blockquote>
-                  <img src="images/person_1.jpg" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
-                  <p>&ldquo;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo omnis voluptatem consectetur quam tempore obcaecati maiores voluptate aspernatur iusto eveniet, placeat ab quod tenetur ducimus. Minus ratione sit quaerat unde.&rdquo;</p>
-                </blockquote>
-
-                <p>&mdash; Kelly Holmes</p>
-              </div>
-        
-              <div class="testimony">
-                <blockquote>
-                  <img src="images/person_2.jpg" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
-                  <p>&ldquo;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo omnis voluptatem consectetur quam tempore
-                    obcaecati maiores voluptate aspernatur iusto eveniet, placeat ab quod tenetur ducimus. Minus ratione sit quaerat
-                    unde.&rdquo;</p>
-                </blockquote>
-              
-                <p>&mdash; Rebecca Morando</p>
-              </div>
-        
-              <div class="testimony">
-                <blockquote>
-                  <img src="images/person_3.jpg" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
-                  <p>&ldquo;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo omnis voluptatem consectetur quam tempore
-                    obcaecati maiores voluptate aspernatur iusto eveniet, placeat ab quod tenetur ducimus. Minus ratione sit quaerat
-                    unde.&rdquo;</p>
-                </blockquote>
-              
-                <p>&mdash; Lucas Gallone</p>
-              </div>
-        
-              <div class="testimony">
-                <blockquote>
-                  <img src="images/person_4.jpg" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
-                  <p>&ldquo;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo omnis voluptatem consectetur quam tempore
-                    obcaecati maiores voluptate aspernatur iusto eveniet, placeat ab quod tenetur ducimus. Minus ratione sit quaerat
-                    unde.&rdquo;</p>
-                </blockquote>
-              
-                <p>&mdash; Andrew Neel</p>
-              </div>
-        
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="site-section bg-secondary bg-image" style="background-image: url('images/bg_2.jpg');">
       <div class="container">
         <div class="row align-items-stretch">

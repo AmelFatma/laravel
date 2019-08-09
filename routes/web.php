@@ -40,6 +40,31 @@ Route::get('/accueil', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/cart', function () {
+    return view('cart');
+});
+
+Route::get('/shop', function () {
+    return view('shop');
+});
+
+Route::get('/shop-single', function () {
+    return view('shop-single');
+});
+
+Route::get('/checkout', function () {
+    return view('checkoutt');
+});
+
+Route::get('/thankyou', function () {
+    return view('thankyou');
+});
+
 Route::get('articles/create', 'ArticleController@create');
 
 Route::post('articles', 'ArticleController@store');
