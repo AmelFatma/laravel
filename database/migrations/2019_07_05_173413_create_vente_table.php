@@ -16,8 +16,8 @@ class CreateVenteTable extends Migration
         Schema::create('vente', function (Blueprint $table) {
             $table->bigIncrements('idV');
             $table->timestamps();
-            $table->integer('idL');
-            $table->integer('idP');
+            $table->integer('lot_id');
+            $table->integer('pharmacien_id');
             $table->date('dateV');
             $table->integer('qt');
         });

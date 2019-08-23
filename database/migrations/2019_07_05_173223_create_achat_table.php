@@ -17,7 +17,7 @@ class CreateAchatTable extends Migration
             $table->bigIncrements('idA');
             $table->timestamps();
             $table->date('dateA');
-            $table->integer('idF');
+            $table->integer('fournisseur_id');
         });
     }
 
