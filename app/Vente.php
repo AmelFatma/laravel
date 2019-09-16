@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Vente extends Model
 {
     //
+    
     public function lot()
     {
         return $this->belongsTo('App\Lot');
