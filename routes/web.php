@@ -93,8 +93,9 @@ Route::get('/listefournisseurs/','FournisseurController@listeFournisseurs');
 Route::get('/addmedicament/','MedicamentController@newMedicament');
 
 Route::get('/listemedicaments/','MedicamentController@listeMedicaments');
+ 
 
-
+Route::get('/ventes', 'VenteController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
