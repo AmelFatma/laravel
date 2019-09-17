@@ -79,6 +79,7 @@
               <span class="icon-shopping-bag"></span>
               <span class="number">2</span>
             </a>
+            <a href="{{ route('login') }}">Login</a>
             <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
                 class="icon-menu"></span></a>
           </div>
