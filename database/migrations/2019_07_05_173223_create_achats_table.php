@@ -17,7 +17,8 @@ class CreateAchatsTable extends Migration
             $table->bigIncrements('idA');
             $table->timestamps();
             $table->date('dateA');
-            $table->integer('fournisseur_id');
+            $table->integer('fournisseur_id')->nullable();
+            $table->foreign('fournisseur_id')->references('idF')->on('fournisseurs')->onDelete('cascade');
         });
     }
 

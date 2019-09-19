@@ -17,7 +17,7 @@ class CreateVentesTable extends Migration
             $table->bigIncrements('idV');
             $table->timestamps();
             $table->integer('lot_id')->nullable();
-            $table->foreign('lot_id')->references('idL')->on('lot')->onDelete('cascade');
+            $table->foreign('lot_id')->references('idL')->on('lots')->onDelete('cascade');
             $table->integer('pharmacien_id')->nullable();
             $table->foreign('pharmacien_id')->references('idP')->on('pharmaciens')->onDelete('cascade');
             $table->date('dateV');
