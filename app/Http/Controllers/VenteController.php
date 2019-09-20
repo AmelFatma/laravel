@@ -40,6 +40,8 @@ class VenteController extends Controller
       $chart->dataset('Nombre de ventes', 'bar', $data);
       return view('nbVentes.index',['chart' => $chart]);
 	}
+
+	
     public function index1()
     {
       $chAAll = Vente::join('lots', 'lots.idL', '=', 'ventes.lot_id')
@@ -67,6 +69,6 @@ class VenteController extends Controller
       $chart->labels($moisAll);
       $chart->dataset("Chiffre d'affaire", 'bar', $data);
       return view('ChiffreAffaire.index1',['chart' => $chart]);
-      //return view('ventes.index1',compact('chart'));
+      //return view('ChiffreAffaire.index1',compact('chart'));
     }
 }
