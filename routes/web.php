@@ -95,7 +95,8 @@ Route::get('/addmedicament/','MedicamentController@newMedicament');
 Route::get('/listemedicaments/','MedicamentController@listeMedicaments');
  
 
-Route::get('/ventes', 'VenteController@index');
+Route::get('/ChiffreAffaire', 'VenteController@index1');
+Route::get('/nbVentes', 'VenteController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

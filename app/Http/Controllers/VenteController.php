@@ -15,63 +15,58 @@ class VenteController extends Controller
     {
       $ventes=Vente::all();
 
- /* $ventesAll = Vente::select (DB::raw('SUM(qt) as total_qt'))
+      $ventesAll = Vente::select (DB::raw('SUM(qt) as total_qt'))
 						->where('dateV','>=',Carbon::now()->firstOfMonth()->toDateTimeString())
                     	->groupBy('dateV')
                     	->get();
 
-     $data = array();              	
-     foreach ($ventesAll as $key => $venteDay){
-     	array_push($data, $venteDay->total_qt);
+      $data = array();              	
+        foreach ($ventesAll as $key => $venteDay){
+     	    array_push($data, $venteDay->total_qt);
      										  }
 
-   
-	$jours = Vente::select('dateV')
+	  $jours = Vente::select('dateV')
 					->distinct()
 					->where('dateV','>=',Carbon::now()->firstOfMonth()->toDateTimeString())
 					->orderBy('dateV')
 					->get();
 
-	$jourAll = array();
-	foreach ($jours as $key => $jour){
-		array_push($jourAll, $jour->dateV);
-									 }
-	*/
-$chAAll = Vente::join('lots', 'lots.idL', '=', 'ventes.lot_id')
+	  $jourAll = array();
+	    foreach ($jours as $key => $jour){
+		    array_push($jourAll, $jour->dateV);
+
+	  $chart = new NombreVentes;							 }
+      $chart->labels($jourAll);
+      $chart->dataset('Nombre de ventes', 'bar', $data);
+      return view('nbVentes.index',['chart' => $chart]);
+	}
+    public function index1()
+    {
+      $chAAll = Vente::join('lots', 'lots.idL', '=', 'ventes.lot_id')
                     ->select(DB::raw('SUM(qt*lots.prix) as total_prix'))
 					->where(DB::raw('YEAR(dateV)'),'=',Carbon::now()->year)
                     ->groupBy(DB::raw('MONTH(dateV)'))
                     ->get();
 
-    $data = array();              	
-    foreach ($chAAll as $key => $venteDay){
-     	array_push($data, $venteDay->total_prix);
+      $data = array();              	
+        foreach ($chAAll as $key => $venteDay){
+     	    array_push($data, $venteDay->total_prix);
      										 }
-$mois = Vente::select(DB::raw('MONTH(dateV)as dateV'))
+      $mois = Vente::select(DB::raw('MONTH(dateV)as dateV'))
 				->distinct()
                 ->where(DB::raw('YEAR(dateV)'),'=',Carbon::now()->year)
                 ->orderBy('dateV')
                 ->get();
- //->where(DB::raw('YEAR("dateV")'),'=',Carbon::now()->year)
-	$moisAll = array();
-	foreach ($mois as $key => $mois){
-		array_push($moisAll, $mois->dateV);
-									 }
 
+	  $moisAll = array();
+	    foreach ($mois as $key => $mois){
+		    array_push($moisAll, $mois->dateV);
+									 }
  
       $chart = new NombreVentes;
-      //$chart->labels($jourAll);
-      //$chart->dataset('Nombre de ventes', 'bar', $data);
-      
       $chart->labels($moisAll);
       $chart->dataset("Chiffre d'affaire", 'bar', $data);
-      return view('ventes.index',['chart' => $chart]);
-     
-      //return view('ventes.index',compact('chart'));
-
+      return view('ChiffreAffaire.index1',['chart' => $chart]);
+      //return view('ventes.index1',compact('chart'));
     }
-
-    
-
-
 }
