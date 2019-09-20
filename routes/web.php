@@ -14,6 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Auth::routes();
+Route::get('/login/admin', 'Auth\LoginController@showAdminLoginForm');
+    Route::get('/login/pharmacien', 'Auth\LoginController@showPharmacienLoginForm');
+
+    Route::post('/login/admin', 'Auth\LoginController@adminLogin');
+    Route::post('/login/pharmacien', 'Auth\LoginController@pharmacienLogin');
+    
+
+    Route::view('/home', 'home')->middleware('auth');
+    Route::view('/admin', 'admin');
+    Route::view('/pharmacien', 'pharmacien');
 
 
 Route::get('/v',function(){
@@ -25,13 +36,6 @@ Route::get('/v/{name}/id/{id}',function($name,$id){
 	echo"<br> contact id:".$id;
 })->where(['name'=>'[a-zA-Z]+','id'=>'[0-9]+']);
 
-Route::get('/articles','ArticleController@articles');
-
-Route::get('/article/{id}','ArticleController@article');
-
-Route::get('/addarticle/','ArticleController@newArticle');
-
-Route::get('/listearticles/','ArticleController@listeArticles');
 
 Route::get('/accueil', function () {
     return view('accueil');
@@ -65,17 +69,6 @@ Route::get('/thankyou', function () {
     return view('thankyou');
 });
 
-Route::get('articles/create', 'ArticleController@create');
-
-Route::post('articles', 'ArticleController@store');
-
-Route::get('articles', 'ArticleController@index');
-
-Route::get('articles/{id}/edit', 'ArticleController@edit');
-
-Route::put('articles/{id}', 'ArticleController@update');
-
-Route::delete('articles/{id}', 'ArticleController@destroy');
 
 Route::prefix('admin')->namespace('Back')->group(function () {
     Route::name('admin')->get('/', 'AdminController@index');
@@ -96,6 +89,10 @@ Route::get('/listemedicaments/','MedicamentController@listeMedicaments');
  
 
 Route::get('/ventes', 'VenteController@index');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
