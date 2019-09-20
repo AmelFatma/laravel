@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\DB;
 use App\Vente;
 use App\Charts\NombreVentes;
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Builder;
+
 class VenteController extends Controller
 {
     //
@@ -13,59 +15,59 @@ class VenteController extends Controller
     {
       $ventes=Vente::all();
 
-     $data = collect([]);
-     $datalabel = collect([]);
-     /*$data->push(Vente::where('dateV','>=',Carbon::now()->firstOfMonth()->toDateTimeString())
-                            	   ->groupBy('dateV')
-                            	   ->sum('qt'));*/
+ /* $ventesAll = Vente::select (DB::raw('SUM(qt) as total_qt'))
+						->where('dateV','>=',Carbon::now()->firstOfMonth()->toDateTimeString())
+                    	->groupBy('dateV')
+                    	->get();
 
+     $data = array();              	
+     foreach ($ventesAll as $key => $venteDay){
+     	array_push($data, $venteDay->total_qt);
+     										  }
 
-     $data->push(Vente::select(DB::raw('SUM(qt) as total_qt'))
-     							
-     	                        ->where('dateV','>=',Carbon::now()->firstOfMonth()->toDateTimeString())
-     	                        
-                            	->groupBy('dateV')
-                            	->get()
-                            	
-                            	);
-    /* $datalabel->push(Vente::select('dateV')
-     							
-     	                        ->where('dateV','>=',Carbon::now()->firstOfMonth()->toDateTimeString())
-     	                        
-                            	->
-                            	
-                            	);*/
+   
+	$jours = Vente::select('dateV')
+					->distinct()
+					->where('dateV','>=',Carbon::now()->firstOfMonth()->toDateTimeString())
+					->orderBy('dateV')
+					->get();
 
-     /*$data->push(Vente::select('dateV')
-     	->where('dateV','>=',Carbon::now()->firstOfMonth()->toDateTimeString())
-                            	   ->groupBy('dateV')
-                            	   ->get()
-                            	   ->map(function ($item) {
-        
-                                            return sum('qt');}
-                                          )
-                            	);*/
+	$jourAll = array();
+	foreach ($jours as $key => $jour){
+		array_push($jourAll, $jour->dateV);
+									 }
+	*/
+$chAAll = Vente::join('lots', 'lots.idL', '=', 'ventes.lot_id')
+                    ->select(DB::raw('SUM(qt*lots.prix) as total_prix'))
+					->where(DB::raw('YEAR(dateV)'),'=',Carbon::now()->year)
+                    ->groupBy(DB::raw('MONTH(dateV)'))
+                    ->get();
 
+    $data = array();              	
+    foreach ($chAAll as $key => $venteDay){
+     	array_push($data, $venteDay->total_prix);
+     										 }
+$mois = Vente::select(DB::raw('MONTH(dateV)as dateV'))
+				->distinct()
+                ->where(DB::raw('YEAR(dateV)'),'=',Carbon::now()->year)
+                ->orderBy('dateV')
+                ->get();
+ //->where(DB::raw('YEAR("dateV")'),'=',Carbon::now()->year)
+	$moisAll = array();
+	foreach ($mois as $key => $mois){
+		array_push($moisAll, $mois->dateV);
+									 }
 
-       // elle me donne + q 1 val esq il faut une boucle?
-      
-
+ 
       $chart = new NombreVentes;
-     // $chart->labels($data->'dateV');// c faux!
-       $chart->labels($data->keys());
-      // options($options, bool $overwrite = false)
-      $chart->dataset('Nombre de ventes', 'bar', $data);
-      /*$data = array
-				  (
-				  array('2019-08-01','2019-08-02','2019-08-03','2019-08-04'),
-				  array(23,20,15,13)
-				  );
-      $chart->dataset('Nombre de ventes', 'bar', $data);*/
-      /*$chart->labels(['2019-08-01', 'Two', 'Three', 'Four']);
-	  $chart->dataset('My dataset', 'line', [1, 2, 3, 4]);
-      $chart->dataset('My dataset 2', 'line', [4, 3, 2, 1]);
-      //return view('ventes.index',compact('chart'));*/
+      //$chart->labels($jourAll);
+      //$chart->dataset('Nombre de ventes', 'bar', $data);
+      
+      $chart->labels($moisAll);
+      $chart->dataset("Chiffre d'affaire", 'bar', $data);
       return view('ventes.index',['chart' => $chart]);
+     
+      //return view('ventes.index',compact('chart'));
 
     }
 
