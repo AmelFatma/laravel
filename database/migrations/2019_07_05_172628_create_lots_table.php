@@ -23,8 +23,8 @@ class CreateLotsTable extends Migration
             $table->date('date_fab');
             $table->date('date_per');
             $table->double('prix');
-            $table->integer('qt_achetee')->nullable();
-            $table->integer('qt_stock')->nullable();
+            $table->integer('qt_achetee');
+            $table->integer('qt_stock');
         });
     }
 
