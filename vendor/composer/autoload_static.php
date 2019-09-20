@@ -371,6 +371,7 @@ class ComposerStaticInit9346e827f43343111fe7877d8f174637
 
     public static $classMap = array (
         'App\\Achat' => __DIR__ . '/../..' . '/app/Achat.php',
+        'App\\Admin' => __DIR__ . '/../..' . '/app/Admin.php',
         'App\\Article' => __DIR__ . '/../..' . '/app/Article.php',
         'App\\Charts\\NombreVentes' => __DIR__ . '/../..' . '/app/Charts/NombreVentes.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
@@ -397,7 +398,6 @@ class ComposerStaticInit9346e827f43343111fe7877d8f174637
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-        'App\\Lot' => __DIR__ . '/../..' . '/app/Lot.php',
         'App\\Medicament' => __DIR__ . '/../..' . '/app/Medicament.php',
         'App\\Pharmacien' => __DIR__ . '/../..' . '/app/Pharmacien.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',

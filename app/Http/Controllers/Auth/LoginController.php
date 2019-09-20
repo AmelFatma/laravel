@@ -35,5 +35,37 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+         $this->middleware('guest:admin')->except('logout');
+            $this->middleware('guest:pharmacien')->except('logout');
     }
+    public function showAdminRegisterForm()
+    {
+        return view('auth.register', ['url' => 'admin']);
+    }
+    public function showPharmacienRegisterForm()
+    {
+        return view('auth.register', ['url' => 'pharmacien']);
+    }
+    protected function createAdmin(Request $request)
+    {
+        $this->validator($request->all())->validate();
+        $admin = Admin::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        ]);
+        return redirect()->intended('login/admin');
+    }
+    protected function createPharmacien(Request $request)
+    {
+        $this->validator($request->all())->validate();
+        $writer = Pharmacien::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        ]);
+        return redirect()->intended('login/pharmacien');
+    }
+
+    
 }
