@@ -41,7 +41,7 @@ class VenteController extends Controller
       return view('nbVentes.index',['chart' => $chart]);
 	}
 
-	
+
     public function index1()
     {
       $chAAll = Vente::join('lots', 'lots.idL', '=', 'ventes.lot_id')
@@ -54,7 +54,7 @@ class VenteController extends Controller
         foreach ($chAAll as $key => $venteDay){
      	    array_push($data, $venteDay->total_prix);
      										 }
-      $mois = Vente::select(DB::raw('MONTH(dateV)as dateV'))
+      $mois = Vente::select(DB::raw('DATE_FORMAT(dateV, "%m/%Y") as dateV'))
 				->distinct()
                 ->where(DB::raw('YEAR(dateV)'),'=',Carbon::now()->year)
                 ->orderBy('dateV')
