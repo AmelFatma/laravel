@@ -42,34 +42,16 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="/" class="js-logo-clone">Pharma</a>
+              <a href="/" class="js-logo-clone">Pharmatique</a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
-                <li><a href="/">Home</a></li>
-                <li><a href="/shop">Store</a></li>
-                <li class="has-children">
-                  <a href="#">Dropdown</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Supplements</a></li>
-                    <li class="has-children">
-                      <a href="#">Vitamins</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Supplements</a></li>
-                        <li><a href="#">Vitamins</a></li>
-                        <li><a href="#">Diet &amp; Nutrition</a></li>
-                        <li><a href="#">Tea &amp; Coffee</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Diet &amp; Nutrition</a></li>
-                    <li><a href="#">Tea &amp; Coffee</a></li>
-
-                  </ul>
-                </li>
-                <li><a href="/about">About</a></li>
-                <li class="active"><a href="/contact">Contact</a></li>
+               <li class="active"><a href="/">Acceuil</a></li>
+                <li><a href="/shop">Magasin</a></li>
+                <li><a href="/about">A Propos</a></li>
+                <li><a href="/contact">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -89,7 +71,7 @@
     <div class="bg-light py-3">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 mb-0"><a href="/">Home</a> <span class="mx-2 mb-0">/</span> <strong
+          <div class="col-md-12 mb-0"><a href="/">Acceuil</a> <span class="mx-2 mb-0">/</span> <strong
               class="text-black">Thank You</strong></div>
         </div>
       </div>
@@ -121,23 +103,15 @@
             </div>
 
           </div>
-          <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
-            <h3 class="footer-heading mb-4">Quick Links</h3>
-            <ul class="list-unstyled">
-              <li><a href="#">Supplements</a></li>
-              <li><a href="#">Vitamins</a></li>
-              <li><a href="#">Diet &amp; Nutrition</a></li>
-              <li><a href="#">Tea &amp; Coffee</a></li>
-            </ul>
-          </div>
+         
 
           <div class="col-md-6 col-lg-3">
             <div class="block-5 mb-5">
               <h3 class="footer-heading mb-4">Contact Info</h3>
               <ul class="list-unstyled">
-                <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
+                <li class="address">Boulevard Ain Sbaa Ali kiffen,Tlemcen,Algérie</li>
                 <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
-                <li class="email">emailaddress@domain.com</li>
+                <li class="email">wafaa.ehm.8@gmail.com</li>
               </ul>
             </div>
 

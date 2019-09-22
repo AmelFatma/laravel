@@ -42,33 +42,15 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="/" class="js-logo-clone">Pharma</a>
+              <a href="/" class="js-logo-clone">Pharmatique</a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
-                <li><a href="/">Home</a></li>
-                <li class="active"><a href="/shop">Store</a></li>
-                <li class="has-children">
-                  <a href="#">Dropdown</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Supplements</a></li>
-                    <li class="has-children">
-                      <a href="#">Vitamins</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Supplements</a></li>
-                        <li><a href="#">Vitamins</a></li>
-                        <li><a href="#">Diet &amp; Nutrition</a></li>
-                        <li><a href="#">Tea &amp; Coffee</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Diet &amp; Nutrition</a></li>
-                    <li><a href="#">Tea &amp; Coffee</a></li>
-
-                  </ul>
-                </li>
-                <li><a href="/about">About</a></li>
+               <li class="active"><a href="/">Acceuil</a></li>
+                <li><a href="/shop">Magasin</a></li>
+                <li><a href="/about">A Propos</a></li>
                 <li><a href="/contact">Contact</a></li>
               </ul>
             </nav>
@@ -99,21 +81,21 @@
         
         <div class="row">
           <div class="col-lg-6">
-            <h3 class="mb-3 h6 text-uppercase text-black d-block">Filter by Price</h3>
+            <h3 class="mb-3 h6 text-uppercase text-black d-block">Filtrer par Prix</h3>
             <div id="slider-range" class="border-primary"></div>
             <input type="text" name="text" id="amount" class="form-control border-0 pl-0 bg-white" disabled="" />
           </div>
           <div class="col-lg-6">
-            <h3 class="mb-3 h6 text-uppercase text-black d-block">Filter by Reference</h3>
+            <h3 class="mb-3 h6 text-uppercase text-black d-block">Filtrer par Reference</h3>
             <button type="button" class="btn btn-secondary btn-md dropdown-toggle px-4" id="dropdownMenuReference"
               data-toggle="dropdown">Reference</button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
               <a class="dropdown-item" href="#">Relevance</a>
-              <a class="dropdown-item" href="#">Name, A to Z</a>
-              <a class="dropdown-item" href="#">Name, Z to A</a>
+              <a class="dropdown-item" href="#">Nom, A à Z</a>
+              <a class="dropdown-item" href="#">Nom, Z à A</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Price, low to high</a>
-              <a class="dropdown-item" href="#">Price, high to low</a>
+              <a class="dropdown-item" href="#">Prix, bas à élevé</a>
+              <a class="dropdown-item" href="#">Prix, élevé à bas</a>
             </div>
           </div>
         </div>
@@ -214,7 +196,7 @@
           <div class="col-lg-6 mb-5 mb-lg-0">
             <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('images/bg_1.jpg');">
               <div class="banner-1-inner align-self-center">
-                <h2>Pharma Products</h2>
+                <h2>Produits de Pharmatique</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.
                 </p>
               </div>
@@ -223,7 +205,7 @@
           <div class="col-lg-6 mb-5 mb-lg-0">
             <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('images/bg_2.jpg');">
               <div class="banner-1-inner ml-auto  align-self-center">
-                <h2>Rated by Experts</h2>
+                <h2>Evalué par des Experts</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.
                 </p>
               </div>
@@ -240,29 +222,21 @@
           <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
 
             <div class="block-7">
-              <h3 class="footer-heading mb-4">About Us</h3>
+              <h3 class="footer-heading mb-4">A Propos de Nous</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae reiciendis distinctio voluptates
                 sed dolorum excepturi iure eaque, aut unde.</p>
             </div>
 
           </div>
-          <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
-            <h3 class="footer-heading mb-4">Quick Links</h3>
-            <ul class="list-unstyled">
-              <li><a href="#">Supplements</a></li>
-              <li><a href="#">Vitamins</a></li>
-              <li><a href="#">Diet &amp; Nutrition</a></li>
-              <li><a href="#">Tea &amp; Coffee</a></li>
-            </ul>
-          </div>
+         
 
           <div class="col-md-6 col-lg-3">
             <div class="block-5 mb-5">
-              <h3 class="footer-heading mb-4">Contact Info</h3>
+              <h3 class="footer-heading mb-4">Informations du Contact</h3>
               <ul class="list-unstyled">
-                <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
+                <li class="address">Boulevard Ain Sbaa Ali kiffen,Tlemcen,Algérie</li>
                 <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
-                <li class="email">emailaddress@domain.com</li>
+                <li class="email">wafaa.ehm.8@gmail.com</li>
               </ul>
             </div>
 

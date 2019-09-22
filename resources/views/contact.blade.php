@@ -33,6 +33,9 @@
         <div class="container">
           <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
           <form action="#" method="post">
+
+              
+
             <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
           </form>
         </div>
@@ -42,34 +45,16 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="/" class="js-logo-clone">Pharma</a>
+              <a href="/" class="js-logo-clone">Pharmatique</a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
-                <li><a href="/">Home</a></li>
-                <li><a href="/shop">Store</a></li>
-                <li class="has-children">
-                  <a href="#">Dropdown</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Supplements</a></li>
-                    <li class="has-children">
-                      <a href="#">Vitamins</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Supplements</a></li>
-                        <li><a href="#">Vitamins</a></li>
-                        <li><a href="#">Diet &amp; Nutrition</a></li>
-                        <li><a href="#">Tea &amp; Coffee</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Diet &amp; Nutrition</a></li>
-                    <li><a href="#">Tea &amp; Coffee</a></li>
-
-                  </ul>
-                </li>
-                <li><a href="/about">About</a></li>
-                <li class="active"><a href="/contact">Contact</a></li>
+               <li class="active"><a href="/">Acceuil</a></li>
+                <li><a href="/shop">Magasin</a></li>
+                <li><a href="/about">A Propos</a></li>
+                <li><a href="/contact">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -101,40 +86,40 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2 class="h3 mb-5 text-black">Get In Touch</h2>
+            <h2 class="h3 mb-5 text-black">Contactez Nous </h2>
           </div>
           <div class="col-md-12">
-    
-            <form action="#" method="post">
-    
+           @if(Session::has('flash_message'))
+             <div class=alert alert-success">{{Session::get('flash_message')}}</div>
+           @endif
+            <form action="{{route('contact.store')}}" method="post">
+                {{csrf_field()}}
+               <form action="#" method="post">
               <div class="p-3 p-lg-5 border">
                 <div class="form-group row">
                   <div class="col-md-6">
-                    <label for="c_fname" class="text-black">First Name <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="c_fname" name="c_fname">
+                    <label for="fname" class="text-black">Nom <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="fname" name="fname">
+                      
                   </div>
                   <div class="col-md-6">
-                    <label for="c_lname" class="text-black">Last Name <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="c_lname" name="c_lname">
+                    <label for="lname" class="text-black">Prenom <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="lname" name="lname">
+                    
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-md-12">
-                    <label for="c_email" class="text-black">Email <span class="text-danger">*</span></label>
-                    <input type="email" class="form-control" id="c_email" name="c_email" placeholder="">
+                    <label for="email" class="text-black">Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="">
+                   
                   </div>
                 </div>
+                 
                 <div class="form-group row">
                   <div class="col-md-12">
-                    <label for="c_subject" class="text-black">Subject </label>
-                    <input type="text" class="form-control" id="c_subject" name="c_subject">
-                  </div>
-                </div>
-    
-                <div class="form-group row">
-                  <div class="col-md-12">
-                    <label for="c_message" class="text-black">Message </label>
-                    <textarea name="c_message" id="c_message" cols="30" rows="7" class="form-control"></textarea>
+                    <label for="message" class="text-black">Message </label>
+                    <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
                   </div>
                 </div>
                 <div class="form-group row">
@@ -192,31 +177,23 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae reiciendis distinctio voluptates
                 sed dolorum excepturi iure eaque, aut unde.</p>
             </div>
-
           </div>
-          <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
-            <h3 class="footer-heading mb-4">Quick Links</h3>
-            <ul class="list-unstyled">
-              <li><a href="#">Supplements</a></li>
-              <li><a href="#">Vitamins</a></li>
-              <li><a href="#">Diet &amp; Nutrition</a></li>
-              <li><a href="#">Tea &amp; Coffee</a></li>
-            </ul>
-          </div>
-
+        
           <div class="col-md-6 col-lg-3">
             <div class="block-5 mb-5">
               <h3 class="footer-heading mb-4">Contact Info</h3>
               <ul class="list-unstyled">
                 <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
                 <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
-                <li class="email">emailaddress@domain.com</li>
+                <li class="email">wafaa.ehm.8@gmail.com</li>
               </ul>
             </div>
-
-
           </div>
-        </div>
+          <div style="height:250px;width:550px;">{!! Mapper::render() !!}
+                
+          </div>
+       
+      </div>
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
             <p>
@@ -233,7 +210,7 @@
       </div>
     </footer>
   </div>
-
+ 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
   <script src="js/popper.min.js"></script>
@@ -243,6 +220,8 @@
   <script src="js/aos.js"></script>
 
   <script src="js/main.js"></script>
+
+
 
 </body>
 

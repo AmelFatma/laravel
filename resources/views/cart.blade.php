@@ -42,7 +42,7 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="logo">
             <div class="site-logo">
-              <a href="/" class="js-logo-clone">Pharma</a>
+              <a href="/" class="js-logo-clone">Pharmatique</a>
             </div>
           </div>
           <div class="main-nav d-none d-lg-block">
@@ -268,23 +268,15 @@
             </div>
 
           </div>
-          <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
-            <h3 class="footer-heading mb-4">Quick Links</h3>
-            <ul class="list-unstyled">
-              <li><a href="#">Supplements</a></li>
-              <li><a href="#">Vitamins</a></li>
-              <li><a href="#">Diet &amp; Nutrition</a></li>
-              <li><a href="#">Tea &amp; Coffee</a></li>
-            </ul>
-          </div>
+        
 
           <div class="col-md-6 col-lg-3">
             <div class="block-5 mb-5">
               <h3 class="footer-heading mb-4">Contact Info</h3>
               <ul class="list-unstyled">
-                <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
+                <li class="address">Boulevard Ain Sbaa Ali kiffen,Tlemcen,Algérie</li>
                 <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
-                <li class="email">emailaddress@domain.com</li>
+                <li class="email">wafaa.ehm.8@gmail.com</li>
               </ul>
             </div>
 

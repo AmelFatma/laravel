@@ -48,28 +48,11 @@
           <div class="main-nav d-none d-lg-block">
             <nav class="site-navigation text-right text-md-center" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
-                <li class="active"><a href="/">Home</a></li>
-                <li><a href="/shop">Store</a></li>
-                <li class="has-children">
-                  <a href="#">Dropdown</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Supplements</a></li>
-                    <li class="has-children">
-                      <a href="#">Vitamins</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Supplements</a></li>
-                        <li><a href="#">Vitamins</a></li>
-                        <li><a href="#">Diet &amp; Nutrition</a></li>
-                        <li><a href="#">Tea &amp; Coffee</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Diet &amp; Nutrition</a></li>
-                    <li><a href="#">Tea &amp; Coffee</a></li>
-                    
-                  </ul>
-                </li>
-                <li><a href="/about">About</a></li>
+                <li class="active"><a href="/">Acceuil</a></li>
+                <li><a href="/shop">Magasin</a></li>
+                <li><a href="/about">A Propos</a></li>
                 <li><a href="/contact">Contact</a></li>
+                <li><a href="/thankyou">Remerciement</a></li>
               </ul>
             </nav>
           </div>
@@ -91,10 +74,10 @@
         <div class="row">
           <div class="col-lg-7 mx-auto order-lg-2 align-self-center">
             <div class="site-block-cover-content text-center">
-              <h2 class="sub-title">Effective Medicine, New Medicine Everyday</h2>
-              <h1>Welcome To Pharmatique</h1>
+              <h2 class="sub-title">MÉDECINE EFFICACE, NOUVELLE MÉDECINE TOUS LES JOURS</h2>
+              <h1>Bienvenue chez Pharmatique</h1>
               <p>
-                <a href="#" class="btn btn-primary px-5 py-3">Shop Now</a>
+                <a href="/contact" class="btn btn-primary px-5 py-3">Se Connecter</a>
               </p>
             </div>
           </div>
@@ -147,7 +130,7 @@
       <div class="container">
         <div class="row">
           <div class="title-section text-center col-12">
-            <h2 class="text-uppercase">Popular Products</h2>
+            <h2 class="text-uppercase">Produits Populaires</h2>
           </div>
         </div>
 
@@ -189,7 +172,7 @@
         </div>
         <div class="row mt-5">
           <div class="col-12 text-center">
-            <a href="/shop" class="btn btn-primary px-4 py-3">View All Products</a>
+            <a href="/shop" class="btn btn-primary px-4 py-3">Voir tous les produits</a>
           </div>
         </div>
       </div>
@@ -200,7 +183,7 @@
       <div class="container">
         <div class="row">
           <div class="title-section text-center col-12">
-            <h2 class="text-uppercase">New Products</h2>
+            <h2 class="text-uppercase">Nouveaux Produits</h2>
           </div>
         </div>
         <div class="row">
@@ -241,7 +224,7 @@
       <div class="container">
         <div class="row">
           <div class="title-section text-center col-12">
-            <h2 class="text-uppercase">Testimonials</h2>
+            <h2 class="text-uppercase">TÉMOIGNAGES</h2>
           </div>
         </div>
         <div class="row">
@@ -302,7 +285,7 @@
           <div class="col-lg-6 mb-5 mb-lg-0">
             <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('images/bg_1.jpg');">
               <div class="banner-1-inner align-self-center">
-                <h2>Pharma Products</h2>
+                <h2>Produits de Pharmatique</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.
                 </p>
               </div>
@@ -311,7 +294,7 @@
           <div class="col-lg-6 mb-5 mb-lg-0">
             <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('images/bg_2.jpg');">
               <div class="banner-1-inner ml-auto  align-self-center">
-                <h2>Rated by Experts</h2>
+                <h2>Evalué Par des Experts</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.
                 </p>
               </div>
@@ -328,29 +311,20 @@
           <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
 
             <div class="block-7">
-              <h3 class="footer-heading mb-4">About Us</h3>
+              <h3 class="footer-heading mb-4">A Propos de Nous</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae reiciendis distinctio voluptates
                 sed dolorum excepturi iure eaque, aut unde.</p>
             </div>
 
           </div>
-          <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
-            <h3 class="footer-heading mb-4">Quick Links</h3>
-            <ul class="list-unstyled">
-              <li><a href="#">Supplements</a></li>
-              <li><a href="#">Vitamins</a></li>
-              <li><a href="#">Diet &amp; Nutrition</a></li>
-              <li><a href="#">Tea &amp; Coffee</a></li>
-            </ul>
-          </div>
 
           <div class="col-md-6 col-lg-3">
             <div class="block-5 mb-5">
-              <h3 class="footer-heading mb-4">Contact Info</h3>
+              <h3 class="footer-heading mb-4">Informations du Contact</h3>
               <ul class="list-unstyled">
-                <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
+                <li class="address">Boulevard Ain Sbaa Ali kiffen,Tlemcen,Algérie</li>
                 <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
-                <li class="email">emailaddress@domain.com</li>
+                <li class="email">wafaa.ehm.8@gmail.com</li>
               </ul>
             </div>
 
