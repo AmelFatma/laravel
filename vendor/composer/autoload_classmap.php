@@ -7,7 +7,13 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Achat' => $baseDir . '/app/Achat.php',
+<<<<<<< HEAD
     'App\\Article' => $baseDir . '/app/Article.php',
+=======
+    'App\\Admin' => $baseDir . '/app/Admin.php',
+    'App\\Article' => $baseDir . '/app/Article.php',
+    'App\\Charts\\NombreVentes' => $baseDir . '/app/Charts/NombreVentes.php',
+>>>>>>> cd2ac1690ad4cae786b1e7c2842488b6d73b0de9
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Fournisseur' => $baseDir . '/app/Fournisseur.php',
@@ -18,13 +24,21 @@ return array(
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Auth\\VerificationController' => $baseDir . '/app/Http/Controllers/Auth/VerificationController.php',
     'App\\Http\\Controllers\\Back\\AdminController' => $baseDir . '/app/Http/Controllers/Back/AdminController.php',
+<<<<<<< HEAD
     'App\\Http\\Controllers\\ContactController' => $baseDir . '/app/Http/Controllers/ContactController.php',
+=======
+>>>>>>> cd2ac1690ad4cae786b1e7c2842488b6d73b0de9
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\FournisseurController' => $baseDir . '/app/Http/Controllers/FournisseurController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\MedicamentController' => $baseDir . '/app/Http/Controllers/MedicamentController.php',
+<<<<<<< HEAD
     'App\\Http\\Controllers\\MessageController' => $baseDir . '/app/Http/Controllers/MessageController.php',
     'App\\Http\\Controllers\\PharmacienController' => $baseDir . '/app/Http/Controllers/PharmacienController.php',
+=======
+    'App\\Http\\Controllers\\PharmacienController' => $baseDir . '/app/Http/Controllers/PharmacienController.php',
+    'App\\Http\\Controllers\\VenteController' => $baseDir . '/app/Http/Controllers/VenteController.php',
+>>>>>>> cd2ac1690ad4cae786b1e7c2842488b6d73b0de9
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -33,7 +47,10 @@ return array(
     'App\\Http\\Middleware\\TrimStrings' => $baseDir . '/app/Http/Middleware/TrimStrings.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+<<<<<<< HEAD
     'App\\Lot' => $baseDir . '/app/Lot.php',
+=======
+>>>>>>> cd2ac1690ad4cae786b1e7c2842488b6d73b0de9
     'App\\Medicament' => $baseDir . '/app/Medicament.php',
     'App\\Pharmacien' => $baseDir . '/app/Pharmacien.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
@@ -43,6 +60,12 @@ return array(
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\User' => $baseDir . '/app/User.php',
     'App\\Vente' => $baseDir . '/app/Vente.php',
+<<<<<<< HEAD
+=======
+    'Balping\\JsonRaw\\Encoder' => $vendorDir . '/balping/json-raw-encoder/src/Encoder.php',
+    'Balping\\JsonRaw\\Raw' => $vendorDir . '/balping/json-raw-encoder/src/Raw.php',
+    'Balping\\JsonRaw\\Replacer' => $vendorDir . '/balping/json-raw-encoder/src/Replacer.php',
+>>>>>>> cd2ac1690ad4cae786b1e7c2842488b6d73b0de9
     'BeyondCode\\DumpServer\\DumpServerCommand' => $vendorDir . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',
     'BeyondCode\\DumpServer\\DumpServerServiceProvider' => $vendorDir . '/beyondcode/laravel-dump-server/src/DumpServerServiceProvider.php',
     'BeyondCode\\DumpServer\\Dumper' => $vendorDir . '/beyondcode/laravel-dump-server/src/Dumper.php',
@@ -81,6 +104,7 @@ return array(
     'Carbon\\Traits\\Units' => $vendorDir . '/nesbot/carbon/src/Carbon/Traits/Units.php',
     'Carbon\\Traits\\Week' => $vendorDir . '/nesbot/carbon/src/Carbon/Traits/Week.php',
     'Carbon\\Translator' => $vendorDir . '/nesbot/carbon/src/Carbon/Translator.php',
+<<<<<<< HEAD
     'Cornford\\Googlmapper\\Contracts\\MappingBaseInterface' => $vendorDir . '/cornford/googlmapper/src/Cornford/Googlmapper/Contracts/MappingBaseInterface.php',
     'Cornford\\Googlmapper\\Contracts\\MappingInterface' => $vendorDir . '/cornford/googlmapper/src/Cornford/Googlmapper/Contracts/MappingInterface.php',
     'Cornford\\Googlmapper\\Contracts\\ModelingInterface' => $vendorDir . '/cornford/googlmapper/src/Cornford/Googlmapper/Contracts/ModelingInterface.php',
@@ -106,6 +130,36 @@ return array(
     'Cornford\\Googlmapper\\Models\\Polyline' => $vendorDir . '/cornford/googlmapper/src/Cornford/Googlmapper/Models/Polyline.php',
     'Cornford\\Googlmapper\\Models\\Rectangle' => $vendorDir . '/cornford/googlmapper/src/Cornford/Googlmapper/Models/Rectangle.php',
     'Cornford\\Googlmapper\\Models\\Streetview' => $vendorDir . '/cornford/googlmapper/src/Cornford/Googlmapper/Models/Streetview.php',
+=======
+    'ConsoleTVs\\Charts\\ChartsServiceProvider' => $vendorDir . '/consoletvs/charts/src/ChartsServiceProvider.php',
+    'ConsoleTVs\\Charts\\Classes\\BaseChart' => $vendorDir . '/consoletvs/charts/src/Classes/BaseChart.php',
+    'ConsoleTVs\\Charts\\Classes\\C3\\Chart' => $vendorDir . '/consoletvs/charts/src/Classes/C3/Chart.php',
+    'ConsoleTVs\\Charts\\Classes\\C3\\Dataset' => $vendorDir . '/consoletvs/charts/src/Classes/C3/Dataset.php',
+    'ConsoleTVs\\Charts\\Classes\\Chartjs\\Chart' => $vendorDir . '/consoletvs/charts/src/Classes/Chartjs/Chart.php',
+    'ConsoleTVs\\Charts\\Classes\\Chartjs\\Dataset' => $vendorDir . '/consoletvs/charts/src/Classes/Chartjs/Dataset.php',
+    'ConsoleTVs\\Charts\\Classes\\DatasetClass' => $vendorDir . '/consoletvs/charts/src/Classes/DatasetClass.php',
+    'ConsoleTVs\\Charts\\Classes\\Echarts\\Chart' => $vendorDir . '/consoletvs/charts/src/Classes/Echarts/Chart.php',
+    'ConsoleTVs\\Charts\\Classes\\Echarts\\Dataset' => $vendorDir . '/consoletvs/charts/src/Classes/Echarts/Dataset.php',
+    'ConsoleTVs\\Charts\\Classes\\Frappe\\Chart' => $vendorDir . '/consoletvs/charts/src/Classes/Frappe/Chart.php',
+    'ConsoleTVs\\Charts\\Classes\\Frappe\\Dataset' => $vendorDir . '/consoletvs/charts/src/Classes/Frappe/Dataset.php',
+    'ConsoleTVs\\Charts\\Classes\\Fusioncharts\\Chart' => $vendorDir . '/consoletvs/charts/src/Classes/Fusioncharts/Chart.php',
+    'ConsoleTVs\\Charts\\Classes\\Fusioncharts\\Dataset' => $vendorDir . '/consoletvs/charts/src/Classes/Fusioncharts/Dataset.php',
+    'ConsoleTVs\\Charts\\Classes\\Highcharts\\Chart' => $vendorDir . '/consoletvs/charts/src/Classes/Highcharts/Chart.php',
+    'ConsoleTVs\\Charts\\Classes\\Highcharts\\Dataset' => $vendorDir . '/consoletvs/charts/src/Classes/Highcharts/Dataset.php',
+    'ConsoleTVs\\Charts\\Commands\\ChartsCommand' => $vendorDir . '/consoletvs/charts/src/Commands/ChartsCommand.php',
+    'ConsoleTVs\\Charts\\Features\\C3\\Chart' => $vendorDir . '/consoletvs/charts/src/Features/C3/Chart.php',
+    'ConsoleTVs\\Charts\\Features\\C3\\Dataset' => $vendorDir . '/consoletvs/charts/src/Features/C3/Dataset.php',
+    'ConsoleTVs\\Charts\\Features\\Chartjs\\Chart' => $vendorDir . '/consoletvs/charts/src/Features/Chartjs/Chart.php',
+    'ConsoleTVs\\Charts\\Features\\Chartjs\\Dataset' => $vendorDir . '/consoletvs/charts/src/Features/Chartjs/Dataset.php',
+    'ConsoleTVs\\Charts\\Features\\Echarts\\Chart' => $vendorDir . '/consoletvs/charts/src/Features/Echarts/Chart.php',
+    'ConsoleTVs\\Charts\\Features\\Echarts\\Dataset' => $vendorDir . '/consoletvs/charts/src/Features/Echarts/Dataset.php',
+    'ConsoleTVs\\Charts\\Features\\Frappe\\Chart' => $vendorDir . '/consoletvs/charts/src/Features/Frappe/Chart.php',
+    'ConsoleTVs\\Charts\\Features\\Frappe\\Dataset' => $vendorDir . '/consoletvs/charts/src/Features/Frappe/Dataset.php',
+    'ConsoleTVs\\Charts\\Features\\Fusioncharts\\Chart' => $vendorDir . '/consoletvs/charts/src/Features/Fusioncharts/Chart.php',
+    'ConsoleTVs\\Charts\\Features\\Fusioncharts\\Dataset' => $vendorDir . '/consoletvs/charts/src/Features/Fusioncharts/Dataset.php',
+    'ConsoleTVs\\Charts\\Features\\Highcharts\\Chart' => $vendorDir . '/consoletvs/charts/src/Features/Highcharts/Chart.php',
+    'ConsoleTVs\\Charts\\Features\\Highcharts\\Dataset' => $vendorDir . '/consoletvs/charts/src/Features/Highcharts/Dataset.php',
+>>>>>>> cd2ac1690ad4cae786b1e7c2842488b6d73b0de9
     'Cron\\AbstractField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
     'Cron\\CronExpression' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
     'Cron\\DayOfMonthField' => $vendorDir . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',

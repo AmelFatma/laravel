@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVenteTable extends Migration
+class CreateVentesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,15 @@ class CreateVenteTable extends Migration
      */
     public function up()
     {
-        Schema::create('vente', function (Blueprint $table) {
+        Schema::create('ventes', function (Blueprint $table) {
             $table->bigIncrements('idV');
             $table->timestamps();
-            $table->integer('idL');
-            $table->integer('idP');
+            $table->integer('lot_id')->nullable();
+<<<<<<< HEAD
+=======
+            $table->foreign('lot_id')->references('idL')->on('lots')->onDelete('cascade');
+>>>>>>> 82ac3f60d3f26120b9933e4ef9cdd9868f0887b9
+            $table->integer('pharmacien_id')->nullable();
             $table->date('dateV');
             $table->integer('qt');
         });
@@ -30,6 +34,6 @@ class CreateVenteTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vente');
+        Schema::dropIfExists('ventes');
     }
 }

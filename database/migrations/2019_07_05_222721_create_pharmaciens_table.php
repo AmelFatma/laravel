@@ -23,7 +23,7 @@ class CreatePharmaciensTable extends Migration
             $table->string('emailP');
             $table->string('login');
             $table->string('password');
-            $table->boolean('isAdmin');
+             $table->boolean('is_admin')->default(false);
         });
     }
 

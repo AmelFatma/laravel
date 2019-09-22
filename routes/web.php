@@ -18,6 +18,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Auth::routes();
+Route::get('/login/admin', 'Auth\LoginController@showAdminLoginForm');
+    Route::get('/login/pharmacien', 'Auth\LoginController@showPharmacienLoginForm');
+
+    Route::post('/login/admin', 'Auth\LoginController@adminLogin');
+    Route::post('/login/pharmacien', 'Auth\LoginController@pharmacienLogin');
+    
+
+    Route::view('/home', 'home')->middleware('auth');
+    Route::view('/admin', 'admin');
+    Route::view('/pharmacien', 'pharmacien');
 
 
 Route::get('/v',function(){
@@ -29,13 +40,6 @@ Route::get('/v/{name}/id/{id}',function($name,$id){
     echo"<br> contact id:".$id;
 })->where(['name'=>'[a-zA-Z]+','id'=>'[0-9]+']);
 
-Route::get('/articles','ArticleController@articles');
-
-Route::get('/article/{id}','ArticleController@article');
-
-Route::get('/addarticle/','ArticleController@newArticle');
-
-Route::get('/listearticles/','ArticleController@listeArticles');
 
 Route::get('/accueil', function () {
     return view('accueil');
@@ -95,12 +99,34 @@ Route::get('/thankyou', function () {
     return view('thankyou');
 });
 
+<<<<<<< HEAD
 Auth::routes();
+=======
+
+Route::prefix('admin')->namespace('Back')->group(function () {
+    Route::name('admin')->get('/', 'AdminController@index');
+    
+});
+
+Route::get('/addpharmacien/','PharmacienController@newPharmacien');
+
+Route::get('/listepharmaciens/','PharmacienController@listePharmaciens');
+>>>>>>> cd2ac1690ad4cae786b1e7c2842488b6d73b0de9
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 
 
+<<<<<<< HEAD
+=======
+Route::get('/listemedicaments/','MedicamentController@listeMedicaments');
+ 
+>>>>>>> cd2ac1690ad4cae786b1e7c2842488b6d73b0de9
 
+Route::get('/ChiffreAffaire', 'VenteController@index1');
+Route::get('/nbVentes', 'VenteController@index');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 
