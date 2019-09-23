@@ -26,46 +26,24 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/home';
-
+ 
+protected function redirectTo( ) {
+    if (Auth::check() && Auth::user()->isAdmin == 'admin') {
+        return('/admin');
+    }
+    elseif (Auth::check() && Auth::user()->isAdmin == 'agent') {
+        return('/agent');
+    }
+    else {
+        return('/');
+    }
+}
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('guest')->except('logout');
-         $this->middleware('guest:admin')->except('logout');
-            $this->middleware('guest:pharmacien')->except('logout');
-    }
-    public function showAdminRegisterForm()
-    {
-        return view('auth.register', ['url' => 'admin']);
-    }
-    public function showPharmacienRegisterForm()
-    {
-        return view('auth.register', ['url' => 'pharmacien']);
-    }
-    protected function createAdmin(Request $request)
-    {
-        $this->validator($request->all())->validate();
-        $admin = Admin::create([
-            'name' => $request['name'],
-            'email' => $request['email'],
-            'password' => Hash::make($request['password']),
-        ]);
-        return redirect()->intended('login/admin');
-    }
-    protected function createPharmacien(Request $request)
-    {
-        $this->validator($request->all())->validate();
-        $writer = Pharmacien::create([
-            'name' => $request['name'],
-            'email' => $request['email'],
-            'password' => Hash::make($request['password']),
-        ]);
-        return redirect()->intended('login/pharmacien');
-    }
+   
 
     
 }

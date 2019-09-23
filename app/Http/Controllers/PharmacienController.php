@@ -8,24 +8,37 @@ use App\Pharmacien;
 
 class PharmacienController extends Controller
 {
-     public function newPharmacien(){
-    	$newPharmacien=new Pharmacien();
-    	$newPharmacien->nomP="BOUKLI";
-    	$newPharmacien->prenomP="Nadia";
-    	$newPharmacien->dateNaissance="10-09-1962";
-    	$newPharmacien->telP="0555142563";
-    	$newPharmacien->emailP="nadia@gmail.com";
-    	$newPharmacien->login="nad";
-    	$newPharmacien->password="b";
-    	$newPharmacien->isAdmin=0;
-    	$newPharmacien->save();    	
-    }
+     
+ 
+protected function create(array $data)
+{
+    return User::create([
+        'name' => $data['name'],
+        'email' => $data['email'],
+        'password' => bcrypt($data['password']),
+        'isAdmin' => $data['isAdmin'],
+        'prenom' => $data['prenom'],
+        'dateNaissance' => $data['dateNaissance'],
+        'tel' => $data['tel'],
+        'login' => $data['login'],
+        'photo' => $data['photo'],
+    ]);
+}
+    protected function validator(array $data)
+{
+    return Validator::make($data, [
+        'name' => 'required|string|max:255',
+        'email' => 'required|string|email|max:255|unique:users',
+        'password' => 'required|string|min:6|confirmed',
+        'isAdmin' => 'required|in:admin,agent', //validate role input
+    ]);
+}
 
      public function listePharmaciens(){
     	
     	$pharmaciens=Pharmacien::all();
         //print_r($pharmaciens);
-                return view('back.index', ['pharmaciens'=>$pharmaciens]);
+                return view('pharmacien.index', ['users'=>$users]);
 
     } 
 
